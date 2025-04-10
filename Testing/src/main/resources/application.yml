@@ -1,0 +1,10 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /test
+
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/Testing?authSource=admin
