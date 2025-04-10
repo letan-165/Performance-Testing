@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
@@ -14,9 +16,9 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     UserService userService;
 
-    @GetMapping("/find/{name}")
-    User findUser(@PathVariable String name){
-        return userService.findUser(name);
+    @GetMapping("/findAll")
+    List<User> findAll(){
+        return userService.findAll();
     }
 
     @PostMapping("/register")
@@ -24,8 +26,18 @@ public class UserController {
         return userService.register(user);
     }
 
-    @PostMapping("/login")
+    @PutMapping("/login")
     boolean login(@RequestBody User user){
         return userService.login(user);
+    }
+
+    @PutMapping("/logout/{name}")
+    boolean logout(@PathVariable String name){
+        return userService.logout(name);
+    }
+
+    @DeleteMapping("/deleteAll")
+    void deleteAll(){
+        userService.deleteAll();
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 @Builder
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -15,4 +15,6 @@ public class User {
     @Id
     String username;
     String password;
+
+    boolean login;
 }
