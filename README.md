@@ -13,15 +13,11 @@ https://1drv.ms/w/c/1d7eb7d3d658e011/EeylQo1qcjlGvUkbJewpOEUBJ3rpZ-ELS37zwktJ5Zy
 
 http://localhost:8080/test/user
 
-FindAllUser: /findAll
+FindAllUser: /findAll  (get)
 
-Register: /register + Body {"username": "", "password": ""}
+Register: /register + Body {"username": "", "password": ""} (post)
 
-Login: /login + Body {"username": "", "password": ""}
-
-Logout: /logout/{name}
-
-DeleteAll : /deleteAll
+DeleteAll : /deleteAll (delete)
 
 *Jmeter test performance 
 
