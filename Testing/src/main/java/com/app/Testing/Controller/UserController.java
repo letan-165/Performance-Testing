@@ -26,16 +26,6 @@ public class UserController {
         return userService.register(user);
     }
 
-    @PutMapping("/login")
-    boolean login(@RequestBody User user){
-        return userService.login(user);
-    }
-
-    @PutMapping("/logout/{name}")
-    boolean logout(@PathVariable String name){
-        return userService.logout(name);
-    }
-
     @DeleteMapping("/deleteAll")
     void deleteAll(){
         userService.deleteAll();
