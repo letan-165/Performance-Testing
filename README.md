@@ -29,3 +29,9 @@ Mở Jmeter : apache-jmeter-5.6.3/bin/jmeter.bat
 
 Mở file trong giao diện Jmeter: file/open/FindUser.jmx 
 
+*K6 test performance 
+
+Mở foder K6/
+
+lệnh "k6 run file-test.js"
+
